@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anita Madani</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --text: #111111;
+      --muted: #555555;
+      --accent: #0055cc;
+      --bg: #ffffff;
+      --highlight: #fff8b3;
+      --border: #e0e0e0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1050px;
+      margin: 40px auto 80px auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    .name {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .top-section {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) auto;
+      gap: 30px;
+      align-items: start;
+      margin-bottom: 30px;
+    }
+
+    .bio-text {
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    .bio-text p {
+      margin: 0 0 0.8rem 0;
+    }
+
+    .headshot {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      background: #f4f4f4;
+    }
+
+    .links-row {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .links-row a {
+      margin-right: 10px;
+    }
+
+    /* Section titles */
+    h2.section-title {
+      margin-top: 40px;
+      margin-bottom: 8px;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle .highlighted {
+      background: var(--highlight);
+    }
+
+    /* Generic lists */
+    .simple-list {
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .simple-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    /* Research list */
+    .paper-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .paper {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .paper-thumb {
+      width: 100%;
+      max-width: 220px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      object-fit: cover;
+      background: #f4f4f4;
+    }
+
+    .paper-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+
+    .paper-title a {
+      text-decoration: none;
+    }
+
+    .paper-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .paper-abstract {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Layout on small screens */
+    @media (max-width: 780px) {
+      .top-section {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: left;
+      }
+
+      .bio-text {
+        text-align: left;
+      }
+
+      .paper {
+        grid-template-columns: 1fr;
+      }
+
+      .paper-thumb {
+        max-width: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Name -->
+    <div class="name">Anita Madani</div>
+
+    <!-- Bio + photo -->
+    <div class="top-section">
+      <div class="bio-text">
+        <p>
+          I am a PhD student in Electrical &amp; Computer Engineering at
+          <a href="https://www.jhu.edu/" target="_blank" rel="noopener noreferrer">Johns Hopkins University</a>.
+          I work with <a href="https://engineering.jhu.edu/faculty/rama-chellappa/" target="_blank" rel="noopener noreferrer">Professor Rama Chellappa</a>
+          and <a href="https://engineering.jhu.edu/faculty/vishal-m-patel/" target="_blank" rel="noopener noreferrer">Dr Vishal Patel</a>
+          in <a href="https://aiem.jhu.edu/" target="_blank" rel="noopener noreferrer">AIEM </a> and <a href="https://engineering.jhu.edu/vpatel36/" target="_blank" rel="noopener noreferrer">VIU Labs</a>.
+        </p>
+        <p>
+        My research lies at the intersection of multimodal foundation models, large vision–language models, generative models, and geometric computer vision. I develop correspondence-aware architectures that combine semantic priors from LLMs with flow-based and implicit representations, enabling precise registration, structural reasoning, and robust alignment and temporal modeling in remote sensing and world-modeling applications.        </p>
+        <p>
+          Since 2024, I have also been part of the
+          <a href="https://www.iarpa.gov/research-programs/wriva" target="_blank" rel="noopener noreferrer"> WRIVA</a>
+          program at JHU, working on wide-area visual recognition, localization, and 3D reconstruction.
+        </p>
+          Outside of research, I enjoy film, yoga, creative writing, and learning new languages.
+          </p>
+
+        <div class="links-row">
+          <!-- TODO: update these links with your real URLs -->
+          <a href="mailto:smadani4@jhu.edu">Email</a> /
+          <a href="https://www.linkedin.com/in/anita-madani-088a60178/" target="_blank" rel="noopener noreferrer">LinkedIn</a> /
+          <a href="https://scholar.google.com/citations?user=awWsAQ4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> /
+          <a href="https://github.com/Anita-Madani" target="_blank" rel="noopener noreferrer">GitHub</a> /
+          <a href="AnitaMadani_CV_Nov.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        </div>
+      </div>
+
+      <!-- Replace src with your real headshot file -->
+      <img src="3910103b4fd04bbba08ec4001afd4ade.jpeg" alt="Anita Madani" class="headshot" />
+    </div>
+
+    <!-- News -->
+    <h2 class="section-title">News</h2>
+    <ul class="simple-list">
+      <li><strong>Nov&nbsp;2025 —</strong> Two <strong>first-author</strong> papers accepted to <strong>WACV&nbsp;2026</strong>.</li>
+      <li><strong>2024 —</strong> Joined the <strong>AIEM Lab</strong> and started working on the <strong> WRIVA</strong> program at JHU.</li>
+      <li><strong>Fall&nbsp;2024 & 2025 —</strong> Serving as a teaching assistant for <em>Medical Imaging Systems (EN.520.432)</em> with Prof.&nbsp;Jerry Prince.</li>
+    </ul>
+
+    <!-- Research -->
+    <h2 class="section-title">Research</h2>
+    
+
+    <div class="paper-list">
+
+      <!-- Paper 1 -->
+      <!--<div class="paper">
+        -- Replace with your own thumbnail image -->
+       <!-- <img src="https://via.placeholder.com/220x150" alt="Paper thumbnail" class="paper-thumb" />
+        <div>
+          <div class="paper-title">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              LoRA-INR: Residual Feature Adaptation for Change Detection via Implicit Neural Representations
+            </a>
+          </div>
+          <div class="paper-meta">
+            <strong>Anita Madani</strong>, co-authors &mdash; arXiv preprint, 2025
+          </div>
+          <div class="paper-abstract">
+            LoRA-INR fits a canonical implicit neural representation to dense features from one image and learns a low-rank residual
+            adaptation to reconstruct the second image in a pair. The low-rank constraint encourages the model to capture structural
+            changes while remaining robust to nuisance variations such as seasonal texture shifts, providing a strong backbone for
+            downstream change detection.
+          </div>
+        </div>
+      </div>-->
+
+      <!--Paper 2 --> 
+      <!-- <div class="paper">
+        <img src="https://via.placeholder.com/220x150" alt="Paper thumbnail" class="paper-thumb" />
+        <div>
+          <div class="paper-title">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              GPC-Change: Registration-Aware Change Detection with Gaussian-Process-Conditioned INRs
+            </a>
+          </div>
+          <div class="paper-meta">
+            <strong>Anita Madani</strong>, co-authors &mdash; WACV 2026
+          </div>
+          <div class="paper-abstract">
+            GPC-Change combines Gaussian-process-conditioned implicit neural representations with a modern change detection head to
+            jointly model geometric registration and semantic change. By explicitly reasoning about local uncertainty in the flow
+            field, the method improves robustness to parallax and small pose errors on standard remote-sensing benchmarks.
+          </div>
+        </div>
+      </div>-->
+
+      <div class="paper">
+        <img src="pipeline-morph.png" alt="Morphing Through Time" class="paper-thumb" />
+        <div>
+          <div class="paper-title">
+            <a href="https://arxiv.org/abs/2511.07976" target="_blank" rel="noopener noreferrer">
+              Morphing Through Time: Diffusion-Based Bridging of Temporal Gaps for Robust Alignment in Change Detection
+            </a>
+          </div>
+          <div class="paper-meta">
+            <strong>Anita Madani</strong>, Vishal M. Patel — WACV 2026 (to appear)
+          </div>
+          <div class="paper-abstract">
+            Remote sensing change detection often suffers from severe misalignment when image acquisitions are separated by large 
+            seasonal or multi-year gaps. This paper introduces a diffusion-based semantic morphing pipeline that synthesizes 
+            intermediate “bridging” frames between bi-temporal images, enabling robust, stepwise correspondence estimation. 
+            The generated morphs guide RoMa-based dense registration, followed by a lightweight U-Net that produces a 
+            high-fidelity warp preserving true structural changes. Experiments on LEVIR-CD, WHU-CD, and DSIFN-CD demonstrate 
+            consistent improvements in both registration accuracy and downstream change detection across multiple backbones, 
+            highlighting the generality and effectiveness of diffusion-assisted temporal alignment.
+          </div>
+        </div>
+      </div>
+
+      <!-- Paper 3 -->
+      <div class="paper">
+        <img src="pipeline.png" alt="Paper thumbnail" class="paper-thumb" />
+        <div>
+          <div class="paper-title">
+            <a href="https://arxiv.org/abs/2511.07935" target="_blank" rel="noopener noreferrer">
+              DiffRegCD: Diffusion-Based Registration for Remote Sensing Change Detection
+            </a>
+          </div>
+          <div class="paper-meta">
+            co-authors, <strong>Anita Madani</strong> &mdash; WACV 2026
+          </div>
+          <div class="paper-abstract">
+            DiffRegCD leverages diffusion models to predict dense flow fields between bi-temporal satellite images and warps
+            multi-scale features before change prediction. The approach yields improved alignment in complex urban scenes while
+            preserving genuine appearance changes and hard boundary details.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Selected Projects</h2>
+
+<div class="paper-list">
+
+  <!-- WRIVA -->
+  <div class="paper">
+    <img src="WRIVA_InfoGraphic with Caption-03.jpg" class="paper-thumb" alt="WRIVA project thumbnail" />
+    <div>
+      <div class="paper-title">WRIVA: Wide-Area Registration, Localization, and 3D Reconstruction</div>
+      <div class="paper-meta">Johns Hopkins University / IARPA — 2024–Present</div>
+      <div class="paper-abstract">
+        Contributing to the IARPA WRIVA program with research spanning image registration,
+        visual localization, and large-scale 3D reconstruction. Developed correspondence and 
+        flow-based algorithms robust to extreme viewpoint shifts, doppelgänger scenes, and 
+        heterogeneous camera models across ground, UAV, and satellite imagery. Built 
+        multi-institution pipelines using Airflow, AWS, and Docker for automated evaluation and 
+        scalable benchmarking on real-world datasets.
+      </div>
+    </div>
+  </div>
+
+  <!-- Semantic Graph Search -->
+  <div class="paper">
+    <img src="s1_sJ01stdUwds-YN4-5SYiyQ.png" class="paper-thumb" alt="Semantic graph thumbnail" />
+    <div>
+      <div class="paper-title">Search Engine Optimization via Persian Semantic Graphs</div>
+      <div class="paper-meta">2021–2022</div>
+      <div class="paper-abstract">
+        Built a large-scale semantic graph over 2M+ Persian documents and applied GNN models 
+        (GCN, GAT) to obtain improved text embeddings. Increased retrieval quality using 
+        spectral clustering and PageRank-based ranking, reducing query latency by 23% and 
+        improving mean reciprocal rank (MRR) by 17%, enabling a significantly more responsive 
+        and accurate search engine pipeline.
+      </div>
+    </div>
+  </div>
+
+  <!-- Swarm Learning -->
+  <div class="paper">
+    <img src="GUID-739C1F67-AEA4-4D40-A26E-6E33BBA393FD-high.png" class="paper-thumb" alt="Swarm learning thumbnail" />
+    <div>
+      <div class="paper-title">Financial Deep Learning with Swarm Learning</div>
+      <div class="paper-meta">2021</div>
+      <div class="paper-abstract">
+        Implemented decentralized regression for financial time-series using swarm learning, 
+        combining LSTM and TCN architectures. Achieved a 7% reduction in RMSE while preserving 
+        institution-level privacy through federated-style weight sharing. Demonstrated the 
+        effectiveness of distributed learning under non-IID conditions.
+      </div>
+    </div>
+  </div>
+
+  <!-- Speech Project -->
+  <div class="paper">
+    <img src="sensors-21-05892-g002.png" class="paper-thumb" alt="Speech dataset thumbnail" />
+    <div>
+      <div class="paper-title">Persian Speech Attribute Classification</div>
+      <div class="paper-meta">Asr-e-Gooyesh Pardaz — Summer 2022</div>
+      <div class="paper-abstract">
+        Constructed a 50k-utterance Persian speech dataset and trained deep neural networks 
+        for gender and age classification using TensorFlow and PyTorch. Reduced prediction 
+        error by 32% through dataset optimization, feature engineering, and architectural 
+        improvements specific to noisy, real-world speech signals.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+    <!-- Teaching -->
+    <h2 class="section-title">Teaching</h2>
+<div class="section-subtitle">
+  I enjoy teaching, mentoring, and supporting students across computer vision, imaging, and systems courses.
+</div>
+
+<ul class="simple-list">
+
+  <li>
+    <strong>Teaching Assistant</strong>, <em>Medical Imaging Systems (EN.520.432)</em>, Johns Hopkins University, Fall 2025.<br />
+    Worked with Professor Jerry Prince. Designed homework and exam problems, prepared assignments and tests, and held weekly office hours and pre-exam review sessions focused on CT, MRI, SPECT, and PET imaging.
+  </li>
+
+  <li>
+    <strong>Teaching Assistant</strong>, <em>Image Analysis</em>, Sharif University of Technology.<br />
+    Supported students with assignments and problem-solving on image processing, signals & systems, and medical imaging fundamentals.
+  </li>
+
+  <li>
+    <strong>Teaching Assistant</strong>, <em>Machine Learning Overview</em>, Sharif University of Technology.<br />
+    Contributed to designing the final project and guided students through hands-on ML applications using Python and supervised/unsupervised learning methods.
+  </li>
+
+
+
+  <li>
+    <strong>Teaching Assistant</strong>, <em>Probability & Random Processes</em>, Sharif University of Technology.<br />
+    Assisted with teaching probability theory, random variables, estimation, and MATLAB-based statistical analysis.
+  </li>
+
+  <li>
+    <strong>Teaching Assistant</strong>, <em>Analog Circuits & Lab</em>, Sharif University of Technology.<br />
+    Taught transistor circuits, amplifiers, lab measurements, and simulation environments including SPICE and MATLAB.
+  </li>
+
+  <li>
+    <strong>Teaching Assistant</strong>, <em>Computer Architecture & Microprocessors</em>, Sharif University of Technology.<br />
+    Guided students through assembly language, digital logic, CPU design, system architecture, and embedded systems fundamentals.
+  </li>
+
+  <li>
+    <strong>Teaching Assistant</strong>, <em>Logical Circuits & Digital Systems Lab</em>, Sharif University of Technology.<br />
+    Taught combinational/sequential logic, Boolean algebra, Verilog, and digital circuit design with hands-on lab supervision.
+  </li>
+
+</ul>
+
+    
+
+    <!-- Service -->
+    <h2 class="section-title">Service</h2>
+    <div class="section-subtitle">
+      Community and reviewing.
+    </div>
+    <ul class="simple-list">
+      <li><strong>Reviewer candidate</strong>, CVPR 2026.</li>
+      <li>Led exam review and problem-solving sessions for Medical Imaging Systems (EN.520.432) at JHU.</li>
+    </ul>
+
+   
+
+
+  </div>
+</body>
+</html>
