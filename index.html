@@ -116,6 +116,42 @@
       margin-bottom: 0.35rem;
     }
 
+    /* Internship logos */
+    .experience-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 14px;
+    }
+
+    .experience-list li {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      column-gap: 20px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .experience-logo {
+      width: 72px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .experience-logo img {
+      display: block;
+      height: auto;
+    }
+
+    .experience-logo .apple-logo {
+      width: 30px;
+    }
+
+    .experience-logo .nec-logo {
+      width: 68px;
+    }
+
     /* Research list */
     .paper-list {
       margin-top: 20px;
@@ -177,6 +213,25 @@
         text-align: left;
       }
 
+      .experience-list li {
+        grid-template-columns: 54px minmax(0, 1fr);
+        column-gap: 14px;
+        align-items: start;
+      }
+
+      .experience-logo {
+        width: 54px;
+        min-height: 40px;
+      }
+
+      .experience-logo .apple-logo {
+        width: 27px;
+      }
+
+      .experience-logo .nec-logo {
+        width: 52px;
+      }
+
       .paper {
         grid-template-columns: 1fr;
       }
@@ -203,7 +258,10 @@
           in <a href="https://aiem.jhu.edu/" target="_blank" rel="noopener noreferrer">AIEM </a> and <a href="https://engineering.jhu.edu/vpatel36/" target="_blank" rel="noopener noreferrer">VIU Labs</a>.
         </p>
         <p>
-          My research lies at the intersection of multimodal foundation models, large vision–language models, generative models, and geometric computer vision. I study how models understand and track objects and scene changes across views and time, with applications in long-horizon video understanding, language-guided scene editing, and visual registration.
+          My research focuses on vision–language models (VLMs), generative models, and geometric computer vision. I study how models understand and control scene changes across views and time, with applications in long-horizon video understanding, language-guided scene editing, and visual registration.
+        </p>
+        <p>
+          In 2026, I interned with <strong>Apple</strong>’s Video Computer Vision team, working on VLMs for video understanding. At <strong>NEC Laboratories America</strong>’s Media Analytics Lab, I worked on generative models for scene editing and simulation.
         </p>
         <p>
           Since 2024, I have also been part of the
@@ -240,14 +298,25 @@
 
     <!-- Research internships -->
     <h2 class="section-title">Research Experience</h2>
-    <ul class="simple-list">
+    <!-- Official logo sources: https://www.apple.com/ and https://jpn.nec.com/nf_global/v3/common/img/2021/site/header-img-04.svg -->
+    <ul class="simple-list experience-list">
       <li>
-        <strong>Machine Learning Research Intern (MLR)</strong>, Apple — Video Computer Vision (VCV) Team, May–September 2026.<br />
-        Worked on vision–language models for video understanding.
+        <div class="experience-logo" aria-hidden="true">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMTIgMTQgMTciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNyI+PHBhdGggZD0ibTEzLjA3MjkgMTcuNjgyNWEzLjYxIDMuNjEgMCAwIDAgLTEuNzI0OCAzLjAzNjUgMy41MTMyIDMuNTEzMiAwIDAgMCAyLjEzNzkgMy4yMjIzIDguMzk0IDguMzk0IDAgMCAxIC0xLjA5NDggMi4yNjE4Yy0uNjgxNi45ODEyLTEuMzk0MyAxLjk2MjMtMi40Nzg3IDEuOTYyM3MtMS4zNjMzLS42My0yLjYxMy0uNjNjLTEuMjE4NyAwLTEuNjUyNS42NTA3LTIuNjQ0LjY1MDdzLTEuNjgzNC0uOTA4OS0yLjQ3ODctMi4wMjQzYTkuNzg0MiA5Ljc4NDIgMCAwIDEgLTEuNjYyOC01LjI3NzZjMC0zLjA5ODQgMi4wMTQtNC43NDA1IDMuOTk2OS00Ljc0MDUgMS4wNTM1IDAgMS45MzE0LjY5MTkgMi41OTI0LjY5MTkuNjMgMCAxLjYxMTItLjczMzMgMi44MDkyLS43MzMzYTMuNzU3OSAzLjc1NzkgMCAwIDEgMy4xNjA0IDEuNTgwMnptLTMuNzI4NC0yLjg5MThhMy41NjE1IDMuNTYxNSAwIDAgMCAuODQ2OS0yLjIyIDEuNTM1MyAxLjUzNTMgMCAwIDAgLS4wMzEtLjMyIDMuNTY4NiAzLjU2ODYgMCAwIDAgLTIuMzQ0NSAxLjIwODQgMy40NjI5IDMuNDYyOSAwIDAgMCAtLjg3NzkgMi4xNTg1IDEuNDE5IDEuNDE5IDAgMCAwIC4wMzEuMjg5MiAxLjE5IDEuMTkgMCAwIDAgLjIxNjkuMDIwNyAzLjA5MzUgMy4wOTM1IDAgMCAwIDIuMTU4Ni0xLjEzNjh6IiBmaWxsPSIjMDAwMDAwIi8+PC9zdmc+" alt="" class="apple-logo" width="30" height="37" />
+        </div>
+        <div>
+          <strong>Machine Learning Research Intern (MLR)</strong>, Apple — Video Computer Vision (VCV) Team, May–September 2026.<br />
+          Worked on vision–language models for video understanding.
+        </div>
       </li>
       <li>
-        <strong>PhD Research Intern</strong>, NEC Laboratories America — Media Analytics Lab, February–May 2026.<br />
-        Worked on generative models for scene editing and simulation.
+        <div class="experience-logo" aria-hidden="true">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNjcgNzIiIHdpZHRoPSIyNjciIGhlaWdodD0iNzIiPjxwYXRoIGQ9Ik0wLDIuMkgyMS40YzQuOSwwLDEwLjcsNC42LDEzLjMsNy4xTDcyLjMsNTFWMi4ySDg1LjFWNjguOEg2Mi43Yy00LS4xLTcuOS0uOS0xMi41LTUuNEwxMi43LDIxLjZWNjguOEgwVjIuMloiIGZpbGw9IiMwZjFlZDIiLz48cGF0aCBkPSJNMjY2LjUsNjkuM2EyMTAuNywyMTAuNywwLDAsMS00Ni4zLDFjLTkuMS0uOC0xOC0yLjctMjYuMi03QzE4My43LDU4LDE4MC41LDQ2LDE4MC42LDM1LjFzMy4xLTIwLjcsMTItMjYuNmM1LjktMy44LDEyLjItNS4xLDE4LjktNi4zLDE4LjEtMy4yLDM2LjMtMi41LDU0LjEtLjV2OS40Yy0yMS00LTQzLTMtNTAuNiw2LjYtNC42LDYtNS4zLDEyLTUuMywxNywwLDksMy4xLDIyLjcsMjEuNCwyNS40LDEyLDEuNywyMy44LjMsMzUuNC0xLjdWNjkuM1oiIGZpbGw9IiMwZjFlZDIiLz48cGF0aCBkPSJNMTM1LjQsNTguOWMxLjkuMSwzMC43LjIsNDAuNiwwdjEwYy0xOS45LjgtMzkuMSwxLjEtNTkuMi4yLTE3LjEtLjctMjAuMS05LjMtMjAuNC0xNy41VjIuMmg3OC43djkuNUgxMjQuMlYyOC42aDQ2LjN2OS4zSDEyNC4yYzAsNSwuMSwxMC43LjIsMTEuNy4yLDYuNSwzLjIsOC45LDExLDkuM1oiIGZpbGw9IiMwZjFlZDIiLz48L3N2Zz4=" alt="" class="nec-logo" width="68" height="18" />
+        </div>
+        <div>
+          <strong>PhD Research Intern</strong>, NEC Laboratories America — Media Analytics Lab, February–May 2026.<br />
+          Worked on generative models for scene editing and simulation.
+        </div>
       </li>
     </ul>
 
