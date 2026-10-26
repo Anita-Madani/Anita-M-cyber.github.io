@@ -326,7 +326,11 @@
 
     <div class="paper-list">
 
-      <div class="paper text-only">
+      <div class="paper">
+        <!-- Figure 1 from the public Iceberg Attention preprint, PDF page 4. -->
+        <a href="iceberg-attention-figure.png" target="_blank" rel="noopener noreferrer" aria-label="View the Iceberg Attention figure at full size">
+          <img src="iceberg-attention-figure.png" alt="Iceberg Attention overview: select relevant token clusters, compute exact attention for selected tokens, approximate the remaining context, and merge the results." class="paper-thumb" loading="lazy" />
+        </a>
         <div>
           <div class="paper-title">
             <a href="https://www.alphaxiv.org/abs/2610.iceberg-attention-long-context-decoding" target="_blank" rel="noopener noreferrer">
@@ -336,6 +340,9 @@
           <div class="paper-meta">
             Armin Gerami, Lasha Koroshinadze, <strong>Seyedehanita Madani</strong>, Prashant Pandey, Ramani Duraiswami<br />
             Preprint, 2026 — Under review, ICLR 2027
+          </div>
+          <div class="paper-abstract">
+            Iceberg Attention makes long-context decoding more efficient by computing attention exactly for a small set of relevant tokens and approximating the combined contribution of the remaining context. Its Mixture-of-Gaussians implementation summarizes groups of cached tokens with compact statistics, reducing memory access without retraining the model. Experiments evaluate both decoding speed and performance on retrieval, coding, and reasoning tasks.
           </div>
         </div>
       </div>
@@ -383,13 +390,22 @@
         </div>
       </div>
 
-      <div class="paper text-only">
+      <div class="paper">
+        <!-- Figure 2 from arXiv:2604.10064, PDF page 3. -->
+        <a href="linear-attention-figure.png" target="_blank" rel="noopener noreferrer" aria-label="View the linear attention runtime figure at full size">
+          <img src="linear-attention-figure.png" alt="Forward and backward attention-layer runtime versus sequence length, comparing regular and linear attention." class="paper-thumb" loading="lazy" />
+        </a>
         <div>
           <div class="paper-title">
-            On The Application of Linear Attention in Multimodal Transformers
+            <a href="https://arxiv.org/abs/2604.10064" target="_blank" rel="noopener noreferrer">
+              On The Application of Linear Attention in Multimodal Transformers
+            </a>
           </div>
           <div class="paper-meta">
-            Gerami et al. — CVPR Workshops 2026
+            Armin Gerami, <strong>Seyedehanita Madani</strong>, Ramani Duraiswami — CVPR Workshops 2026
+          </div>
+          <div class="paper-abstract">
+            This work investigates linear attention as an efficient alternative to softmax attention in multimodal transformers. Experiments with ViT models trained on LAION-400M show competitive zero-shot classification performance and similar scaling trends across model sizes. Attention-layer benchmarks demonstrate linear growth in runtime with sequence length, reducing the cost of processing long sequences.
           </div>
         </div>
       </div>
